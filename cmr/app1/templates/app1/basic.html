@@ -1,0 +1,54 @@
+{%extends 'app1/common.html'%}
+{%block title%}HOME PAGE{% endblock %}
+{%block body%}
+    <h1>THIS IS BASIC INFORMATION COLLECTNG PAGE</h1>
+
+
+    <form action="function1" method="post">{% csrf_token %}
+        <div class="row">
+          <div class="col">
+            <input name = "firstname" type="text" class="form-control" placeholder="First name">
+          </div>
+          <div class="col">
+            <input name = "lastname" type="text" class="form-control" placeholder="Last name">
+          </div>
+        </div>
+    
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input name = "email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input name = "password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input name = "address1" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+          <label for="inputAddress2">Address 2</label>
+          <input name = "address2" type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input name = "city" type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <select name = "State" id="inputState" class="form-control">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Pin Code</label>
+            <input name = "pincode" type="number" class="form-control" id="inputZip">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+{% endblock %}
